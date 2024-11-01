@@ -1,3 +1,4 @@
+pip==24.3.1
 contractions==0.1.73
 emoji==2.12.1
 folium==0.17.0
