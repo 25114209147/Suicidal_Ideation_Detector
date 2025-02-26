@@ -125,7 +125,7 @@ def main_page():
 
 # For Gemini
 # Function to get response from Google Gemini
-model = ggi.GenerativeModel("gemini-pro") 
+model = ggi.GenerativeModel("gemini-2.0-flash") 
 chat = model.start_chat()
 
 # Customized response for sensitive content
