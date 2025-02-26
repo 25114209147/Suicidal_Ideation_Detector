@@ -24,9 +24,9 @@ import queue
 load_dotenv(".env")
     
 # For Gemini
-# Fetch API key from environment variables
-fetcheed_api_key = os.getenv("API_KEY")
-ggi.configure(api_key=fetcheed_api_key)
+# Fetch API key from Streamlit secrets
+fetched_api_key = st.secrets["API_KEY"]
+ggi.configure(api_key=fetched_api_key)
 
 # Set page configuration at the beginning
 st.set_page_config(page_title="Suicidal Ideation Detection", page_icon="💬", layout="wide")
