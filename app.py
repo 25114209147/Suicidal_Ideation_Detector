@@ -146,7 +146,7 @@ def is_suicidal(text):
 # Function to get response from Google Gemini
 def LLM_Response(question):
     try:
-        model = ggi.GenerativeModel("gemini-pro")
+        model = ggi.GenerativeModel("gemini-2.0-flash")
         chat = model.start_chat()
         response = chat.send_message(question, stream=True)
         return response
@@ -277,7 +277,7 @@ def about_page():
     st.write("""
         This page is designed to classify the content as either **Suicidal** or **Non-Suicidal**.\n
         If the content is identified as **Suicidal**, this tool will attempt to categorize the text into **specific issue categories** if detectable. 
-        The issue will be identified using Google Gemini's GenerativeModel ("gemini-pro").
+        The issue will be identified using Google Gemini's GenerativeModel ("gemini-2.0-flash").
              
         **Please note:** This tool provides insights based on text analysis and is not a substitute for professional medical advice or diagnosis. 
         If you or someone you know is experiencing distress or thoughts of self-harm, please seek immediate help from a mental health professional or contact emergency services.
@@ -285,7 +285,7 @@ def about_page():
     
     st.divider()
     st.markdown('#### 🤖 Chatbot Page')
-    st.markdown('''Explore the Chatbot Page to interact with our AI-powered chatbot, driven by Google Gemini's GenerativeModel ("gemini-pro"). 
+    st.markdown('''Explore the Chatbot Page to interact with our AI-powered chatbot, driven by Google Gemini's GenerativeModel ("gemini-2.0-flash"). 
                 Whether you need **information**, **advice**, or just **someone to talk to**, the chatbot is here to assist you! 
                 ''')
 
