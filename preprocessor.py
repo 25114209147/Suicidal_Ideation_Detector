@@ -301,7 +301,7 @@ def get_advice_from_gemini(text):
 
     for attempt in range(max_retries):
         try:
-            model = ggi.GenerativeModel("gemini-pro")
+            model = ggi.GenerativeModel("gemini-2.0-flash")
             chat = model.start_chat()
             response = chat.send_message(prompt, stream=False)  # Set stream to False for a single response
             print(response)  # Add this line to inspect the response structure
@@ -408,7 +408,7 @@ def get_advice_from_gemini2(text):
 
     for attempt in range(max_retries):
         try:
-            model = ggi.GenerativeModel("gemini-pro")
+            model = ggi.GenerativeModel("gemini-2.0-flash")
             chat = model.start_chat()
             response = chat.send_message(prompt, stream=False)  # Set stream to False for a single response
             print(response)  # Add this line to inspect the response structure
